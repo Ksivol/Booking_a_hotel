@@ -12,7 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Booking_a_hotel"
         tools:targetApi="31">
+
         <activity
+
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -26,5 +28,8 @@
                 android:value="" />
         </activity>
     </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
 </manifest>
