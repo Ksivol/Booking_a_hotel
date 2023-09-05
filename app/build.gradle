@@ -1,16 +1,17 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
 }
 
 android {
     namespace 'com.ksivol_project.booking_a_hotel'
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.ksivol_project.booking_a_hotel"
         minSdk 21
-        targetSdk 32
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 
@@ -30,21 +31,21 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
 
     implementation 'androidx.core:core-ktx:1.8.10'
     //start
-    implementation 'androidx.room:room-ktx:2.5.2'
+    implementation 'androidx.viewpager2:viewpager2:1.0.0'
     kapt 'androidx.room:room-compiler:2.5.2'
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.6.1'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1'
     implementation 'androidx.preference:preference-ktx:1.2.0'
 
-    implementation 'com.github.smarteist:autoimageslider:1.3.9' // slider view
-
-    implementation 'com.github.bumptech.glide:glide:4.11.0' // image from url
 
     //End
     implementation 'androidx.appcompat:appcompat:1.6.1'
